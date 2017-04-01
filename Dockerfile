@@ -14,5 +14,5 @@ COPY . /usr/src/app
 
 CMD ["pm2-docker", "process.yml", "--only", "MenuxxTools"]
 
-EXPOSE 8090
-EXPOSE 8091
+EXPOSE 8071
+EXPOSE 8072
