@@ -32,11 +32,10 @@ app.get('/access_token', function (req, resp) {
   })
 })
 
-app.get('/get_table_qrcode/:path', function (req, resp) {
-  var {access_token} = req.query
-  console.log(access_token)
+app.get('/get_table_qrcode', function (req, resp) {
+  var {access_token, path} = req.query
   request.post(`https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token=${access_token}`, {
-    body: { "path": decodeURIComponent(req.params.path), "width": 800 },
+    body: { "path": decodeURIComponent(path), "width": 800 },
     json: true,
   }).pipe(resp)
 })
