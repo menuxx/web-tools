@@ -1,0 +1,11 @@
+apps:
+  - script: app.js
+    name: MenuxxTools
+    cwd : /usr/src/app/
+    exec_mode  : fork_mode
+    exec_interpreter: './node_modules/babel-cli/bin/babel-node.js'
+    max_memory_restart: 512M
+    env:
+      NODE_ENV: production
+    env_production:
+      NODE_ENV: production

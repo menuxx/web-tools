@@ -1,0 +1,29 @@
+{
+  "name": "menuxx-tools",
+  "version": "1.0.0",
+  "description": "菜单加Web工具集合",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "run": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menuxx/web-tools.git"
+  },
+  "keywords": [
+    "web工具集合"
+  ],
+  "author": "ychangsheng@gmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/menuxx/web-tools/issues"
+  },
+  "homepage": "https://github.com/menuxx/web-tools#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "node-cache": "^4.1.1",
+    "request": "^2.81.0"
+  }
+}

@@ -41,34 +41,44 @@
 
     <div class="container">
         <div class="row">
-            <form>
+            <form id="qrForm">
               <div class="form-group">
                 <label>店家APPID:</label>
-                <input type="text" class="form-control" placeholder="微信AppId">
+                <input type="text" class="form-control" value="" name="appId" placeholder="微信AppId">
               </div>
               <div class="form-group">
                 <label>店家AppSecret:</label>
-                <input type="text" class="form-control" placeholder="微信AppSecret">
+                <input type="text" class="form-control" value="" name="appSecret" placeholder="微信AppSecret">
               </div>
               <div class="form-group">
                 <label>桌子个数:</label>
-                <input type="text" class="form-control" placeholder="打包桌Id为0，所以桌子个数为n+1">
+                <input type="text" class="form-control" name="idFrom" placeholder="桌子Id开始">
+              </div>
+              <div class="form-group">
+                <label>桌子个数:</label>
+                <input type="text" class="form-control" name="idTo" placeholder="桌子Id截止">
               </div>
               <button type="submit" class="btn btn-default">生成</button>
             </form>
         </div>
-
         <div class="row">
-          <div class="col-xs-6 col-md-3">
-            <a class="thumbnail">
-              <img src="..." alt="未能正常显示桌子二维码">
-            </a>
+          <div class="alert alert-info">
+            桌号ID为0的是打包桌
           </div>
         </div>
+        <div class="row table-qrcode-list"></div>
         
     </div>
-
+    <script id="qrcodeTable" type="text/template">
+        <div class="col-xs-6 col-md-3">
+          <a class="thumbnail">
+            <img src="IMAGE_URL" alt="未能正常显示桌子二维码">
+          </a>
+          <span>桌子ID: TABLE_ID</span>
+        </div>
+    </script>
+    <script src="//cdn.bootcss.com/qs/6.3.2/qs.js"></script>
     <script src="//cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
-
+    <script src="./qrgen.js"></script>
 </body>
 </html>    
