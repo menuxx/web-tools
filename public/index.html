@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap中文网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="菜单加工具集合">
+    <meta name="keywords" content="Menuxx,菜单加,菜单加工具集合">
+    <meta name="author" content="menuxx.com">
+    <meta name="robots" content="index,follow">
+    <!-- Site CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand hidden-sm" href="https://www.menuxx.com">菜单加</a>
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="hidden-sm hidden-md"><a href="/"  target="_blank">桌号生成</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <form>
+              <div class="form-group">
+                <label>店家APPID:</label>
+                <input type="text" class="form-control" placeholder="微信AppId">
+              </div>
+              <div class="form-group">
+                <label>店家AppSecret:</label>
+                <input type="text" class="form-control" placeholder="微信AppSecret">
+              </div>
+              <div class="form-group">
+                <label>桌子个数:</label>
+                <input type="text" class="form-control" placeholder="打包桌Id为0，所以桌子个数为n+1">
+              </div>
+              <button type="submit" class="btn btn-default">生成</button>
+            </form>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6 col-md-3">
+            <a class="thumbnail">
+              <img src="..." alt="未能正常显示桌子二维码">
+            </a>
+          </div>
+        </div>
+        
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+
+</body>
+</html>    
