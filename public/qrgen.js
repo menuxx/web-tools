@@ -6,7 +6,7 @@ $(function() {
   var tableList = $(".table-qrcode-list")
 
   function tableQrCodeUrl (tableId, accessToken) {
-    return qrcodeTableHTML.replace('IMAGE_URL', "/get_table_qrcode?path=" + encodeURIComponent('pages/index/index?tableId=' + tableId) + `&access_token=${accessToken}`).replace("TABLE_ID", tableId)
+    return qrcodeTableHTML.replace('IMAGE_URL', "/adminxx/get_table_qrcode?path=" + encodeURIComponent('pages/index/index?tableId=' + tableId) + `&access_token=${accessToken}`).replace("TABLE_ID", tableId)
   }
 
   $("#qrForm").on('submit', function (e) {
@@ -26,7 +26,7 @@ $(function() {
 
     $.ajax({
       method: 'GET',
-      url: `./access_token?appId=${formData.appId}&appSecret=${formData.appSecret}`,
+      url: `/adminxx/access_token?appId=${formData.appId}&appSecret=${formData.appSecret}`,
       dataType: 'json'
     }).then(function(data){
 
