@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -9,9 +8,10 @@
     <meta name="keywords" content="Menuxx,菜单加,菜单加工具集合">
     <meta name="author" content="menuxx.com">
     <meta name="robots" content="index,follow">
+    <meta name="context-path" content="{{contextPath}}" />
     <!-- Site CSS -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -19,7 +19,6 @@
     </style>
 </head>
 <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -33,7 +32,7 @@
         </div>
         <div class="navbar-collapse collapse" role="navigation">
           <ul class="nav navbar-nav">
-            <li class="hidden-sm hidden-md"><a href="/adminxx"  target="_blank">桌号生成</a></li>
+            <li class="hidden-sm hidden-md"><a href="{{contextPath}}"  target="_blank">桌号生成</a></li>
           </ul>
         </div>
       </div>
@@ -41,7 +40,8 @@
 
     <div class="container">
         <div class="row">
-            <form id="qrForm">
+          <div class="col-md-6">
+            <form class="form" id="qrForm">
               <div class="form-group">
                 <label>店家APPID:</label>
                 <input type="text" class="form-control" value="" name="appId" placeholder="微信AppId">
@@ -60,15 +60,17 @@
               </div>
               <button type="submit" class="btn btn-default">生成</button>
             </form>
-        </div>
-        <div class="row">
-          <div class="alert alert-info">
-            桌号ID为0的是打包桌
+            <div class="alert alert-info">
+              桌号ID为0的是打包桌
+            </div>
+          </div>
+          <div class="col-md-6">
+
           </div>
         </div>
         <div class="row table-qrcode-list"></div>
-        
     </div>
+
     <script id="qrcodeTable" type="text/template">
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail">
@@ -77,8 +79,11 @@
           <span>桌子ID: TABLE_ID</span>
         </div>
     </script>
+    <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.js"></script>
+    <script src="//cdn.bootcss.com/vue/2.2.6/vue.min.js"></script>
+    <script type="text/javascript" src="{{baseUrl}}{{contextPath}}rasterizeHTML.allinone.js"></script>
     <script src="//cdn.bootcss.com/qs/6.3.2/qs.js"></script>
     <script src="//cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
-    <script src="/adminxx/qrgen.js"></script>
+    <script src="{{baseUrl}}{{contextPath}}qrgen.js"></script>
 </body>
 </html>    
